@@ -1,0 +1,72 @@
+@use "../assets/variables" as *;
+/*Start ContactUs*/
+.contact-us {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  .container {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      form {
+        flex-basis: 70%;
+        .main-input {
+          background: none;
+          display: block;
+          border: 1px solid #ccc;
+          padding: calc($main_padding * 2);
+          margin-bottom: $content_gap;
+          width: 100%;
+          outline: none;
+        }
+        input[type="submit"] {
+          background-color: $main_color;
+          border: none;
+          color: white;
+          text-transform: uppercase;
+          padding: 20px;
+          cursor: pointer;
+          display: flex;
+          margin-left: auto;
+          @media (max-width: 767px) {
+            font-size: $paragraph_size;
+            padding: 15px;
+          }
+        }
+        textarea {
+          height: 200px;
+        }
+      }
+      .info {
+        flex-basis: 25%;
+        .text-box {
+          margin-bottom: calc($section_gap * 0.9);
+          h4 {
+            text-transform: uppercase;
+            margin-bottom: $content_gap;
+            font-weight: 500;
+            font-size: 1.125em;
+          }
+          span {
+            display: block;
+            color: $paragraph_color;
+            margin-bottom: 10px;
+          }
+          address {
+            color: $paragraph_color;
+            line-height: $paragraph_height;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        flex-direction: column-reverse;
+        .info {
+          text-align: center;
+          .text-box {
+            margin-bottom: $content_gap;
+          }
+        }
+      }
+    }
+  }
+}
+/*End ContactUs*/

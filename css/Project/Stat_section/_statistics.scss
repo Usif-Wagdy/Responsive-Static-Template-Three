@@ -1,0 +1,52 @@
+@use "../assets/variables" as *;
+.stats {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  text-align: center;
+  background-image: url(../../../images/stats.png);
+  background-size: cover;
+  position: relative;
+  .overlay {
+    background-color: rgb(0 0 0 / 70%);
+  }
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    .box {
+      padding: calc($section_gap / 2);
+      background-color: $transparent_color;
+      i {
+        background-color: black;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto $content_gap;
+      }
+      .number {
+        color: white;
+        font-size: calc($heading_size * 1.5625);
+        font-weight: bold;
+        margin-bottom: calc($main_padding * 2);
+      }
+      p {
+        color: white;
+        font-size: $paragraph_size;
+      }
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+        margin-bottom: 5px;
+      }
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+      @media (min-width: 992px) {
+        flex-basis: 25%;
+      }
+    }
+  }
+}

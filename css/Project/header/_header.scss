@@ -1,0 +1,97 @@
+@use "../assets/variables" as *;
+/* Start Header */
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 97px;
+    .logo {
+      img {
+        height: calc($main_padding * 4);
+      }
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      ul {
+        display: flex;
+        li {
+          a {
+            display: block;
+            padding: calc($main_padding * 4) $main_padding;
+            color: white;
+            text-transform: uppercase;
+            font-size: $paragraph_size;
+            transition: 0.3s;
+            &:hover,
+            &.active {
+              color: $main_color;
+              border-bottom: 1px solid $main_color;
+            }
+          }
+        }
+      }
+      .form {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        margin-left: $content_gap;
+        border-left: 1px solid white;
+        text-align: center;
+        i {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+      .toggle-menu {
+        color: white;
+        font-size: 22px;
+        position: relative;
+        @media (min-width: 767px) {
+          display: none;
+        }
+      }
+      @media (max-width: 767px) {
+        ul {
+          display: none;
+        }
+        .toggle-menu:hover + ul {
+          display: flex;
+          flex-flow: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 50%);
+          a {
+            padding: calc($main_padding * 1.5);
+          }
+        }
+      }
+    }
+    &::after {
+      content: "";
+      background-color: #a2a2a2;
+      height: 1px;
+      width: calc(100% - ($main_padding * 3));
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+      left: calc($main_padding * 1.5);
+    }
+  }
+}
+/* End Header */

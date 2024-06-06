@@ -1,0 +1,68 @@
+@use "../assets/variables" as *;
+/*Start Subscribe*/
+.subscribe {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  background-image: url(../../../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  .overlay {
+    background-color: rgb(0 0 0 /50%);
+  }
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $content_gap;
+    form {
+      display: flex;
+      position: relative;
+      width: 500px;
+      max-width: 100%;
+      border: 1px solid white;
+      input[type="email"] {
+        color: white;
+        outline: none;
+        border: 1px solid white;
+        border-right: none;
+        background: none;
+        caret-color: $main_color;
+        width: calc(100% - 130px);
+        padding: 20px {
+          left: 60px;
+        }
+        &::placeholder {
+          color: white;
+        }
+      }
+      input[type="submit"] {
+        background-color: $main_color;
+        padding: 10px 20px;
+        color: white;
+        border: 1px solid white;
+        border-left: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: 130px;
+      }
+      i {
+        color: white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+      }
+    }
+    p {
+      color: white;
+      flex: 1;
+      line-height: $paragraph_height;
+    }
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+}
+/*End Subscribe*/

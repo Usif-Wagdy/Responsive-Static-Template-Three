@@ -1,0 +1,43 @@
+@use "../assets/variables" as *;
+/*Start Footer*/
+footer {
+  padding-top: calc($section_gap / 2);
+  padding-bottom: calc($section_gap / 1.8);
+  position: relative;
+  background-image: url(../../../images/subscribe.jpg);
+  background-size: cover;
+  .overlay {
+    background-color: rgb(0 0 0 / 70%);
+  }
+  .container {
+    position: relative;
+    color: white;
+    text-align: center;
+    .logo {
+      margin-bottom: $text_gap;
+    }
+    p {
+      &:first-of-type {
+        text-transform: uppercase;
+        padding: 20px;
+        border-bottom: 1px solid white;
+        font-size: 1.375em;
+        width: fit-content;
+        margin: $text_gap auto;
+      }
+      &:last-of-type {
+        margin-top: calc($section_gap * 0.6);
+        span {
+          color: $main_color;
+          font-weight: bold;
+        }
+      }
+    }
+    .icons {
+      i {
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+/*End Footer*/

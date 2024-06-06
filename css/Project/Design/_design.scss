@@ -1,0 +1,35 @@
+@use "../assets/variables" as *;
+/* Start Design*/
+.design {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  height: 600px;
+  background-image: url(../../../images/design-features.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  .image {
+    width: 50%;
+    text-align: center;
+    z-index: 2;
+    img {
+      position: relative;
+      bottom: -150px;
+    }
+  }
+  .transparent-alert {
+    right: 0;
+    justify-content: flex-start;
+  }
+  @media (max-width: 767px) {
+    .image {
+      display: none;
+    }
+    .transparent-alert {
+      width: 100%;
+      padding: $content_gap;
+    }
+  }
+}
+/* End Design*/

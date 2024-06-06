@@ -1,0 +1,75 @@
+@use "../assets/variables" as *;
+/*Start Portfolio*/
+.portfolio {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  .container {
+    .shuffle {
+      display: flex;
+      justify-content: center;
+      li {
+        padding: $main_padding;
+        cursor: pointer;
+        &.active {
+          background-color: $main_color;
+          color: white;
+        }
+      }
+    }
+  }
+  .imgs-container {
+    margin-top: calc($section_gap * 0.6);
+    display: flex;
+    flex-flow: row wrap;
+    .box {
+      position: relative;
+      overflow: hidden;
+      .caption {
+        position: absolute;
+        left: 0;
+        padding: calc($main_padding * 2);
+        background-color: white;
+        width: 100%;
+        transition: 0.3s;
+        bottom: -100%;
+        h4 {
+          font-weight: normal;
+          margin-bottom: $main_padding;
+        }
+        p {
+          color: $main_color;
+        }
+      }
+      img {
+        width: 100%;
+        transition: 0.3s;
+      }
+      &:hover .caption {
+        bottom: 0;
+      }
+      &:hover img {
+        transform: rotate(3deg) scale(1.1);
+      }
+    }
+    @media (min-width: 768px) {
+      .box {
+        flex-basis: 50%;
+      }
+    }
+    @media (min-width: 1199px) {
+      .box {
+        flex-basis: 25%;
+      }
+    }
+  }
+  .more {
+    background-color: $main_color;
+    color: white;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    margin: $content_gap auto 0;
+  }
+}
+/*End Portfolio*/

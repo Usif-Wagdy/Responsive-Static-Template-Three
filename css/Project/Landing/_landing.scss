@@ -1,0 +1,60 @@
+@use "../assets/variables" as *;
+
+/* Start landing */
+
+.landing {
+  min-height: 100vh;
+  background-image: url(../../../images/landing.jpg);
+  background-size: cover;
+  position: relative;
+  .transparent-alert {
+    left: 0;
+    justify-content: flex-end;
+  }
+  i {
+    color: #ddd;
+    position: absolute;
+    &.left {
+      top: 50%;
+      transform: translateY(-50%);
+      left: $content_gap;
+    }
+    &.right {
+      top: 50%;
+      transform: translateY(-50%);
+      right: $content_gap;
+    }
+  }
+  .bullets {
+    position: absolute;
+    bottom: $content_gap;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    gap: calc($content_gap / 3);
+    li {
+      width: 20px;
+      height: 20px;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+    .active {
+      background-color: $main_color;
+    }
+  }
+  // Media for Landing
+  @media (max-width: 767px) {
+    .transparent-alert {
+      width: 100%;
+      padding: $content_gap;
+      .content {
+        max-width: 100%;
+      }
+    }
+    i {
+      display: none;
+    }
+  }
+}
+/* End Landing */

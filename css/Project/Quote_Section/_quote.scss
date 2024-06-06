@@ -1,0 +1,37 @@
+@use "../assets/variables" as *;
+/*Start Quote*/
+.quote {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  background-image: url(../../../images/quote.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+  .overlay {
+    background-color: rgb(0 0 0 /75%);
+  }
+  .container {
+    position: relative;
+    p {
+      font-size: $heading_size;
+      line-height: $heading_height;
+      display: block;
+      margin-bottom: $text_gap;
+      position: relative;
+      &::before {
+        content: "\f10d";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: $paragraph_size;
+      }
+      &::after {
+        content: "\f10e";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: $paragraph_size;
+      }
+    }
+  }
+}
+/*End Quote*/

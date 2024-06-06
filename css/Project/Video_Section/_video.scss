@@ -1,0 +1,40 @@
+@use "../assets/variables" as *;
+/*Start Video*/
+.video {
+  position: relative;
+  video {
+    width: 100%;
+  }
+  .overlay {
+    background-color: rgb(0 0 0 / 40%);
+  }
+  .transparent-alert {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    .button {
+      background-color: black;
+      width: fit-content;
+      margin: $content_gap auto 0;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    @media (max-width: 767px) {
+      padding: $content_gap;
+      h2 {
+        font-size: 1em;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 0.7em;
+      }
+      .button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+/*End Video*/

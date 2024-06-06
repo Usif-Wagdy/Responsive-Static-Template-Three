@@ -1,0 +1,39 @@
+@use "../assets/variables" as *;
+
+/* Start Services*/
+.services {
+  padding-top: $section_gap;
+  padding-bottom: $section_gap;
+  .container {
+    .services-container {
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, auto));
+        column-gap: $content_gap;
+        row-gap: calc($content_gap * 1.5);
+      }
+      .srv-box {
+        display: flex;
+        justify-content: space-between;
+        gap: calc($content_gap * 1.67);
+        .text {
+          h3 {
+            color: $main_color;
+            margin-bottom: $content_gap;
+          }
+          p {
+            color: $paragraph_color;
+            line-height: $paragraph_height;
+          }
+        }
+        @media (max-width: 767px) {
+          gap: $content_gap;
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: calc($content_gap * 1.33);
+        }
+      }
+    }
+  }
+}
+/* End Services*/
